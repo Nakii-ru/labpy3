@@ -1,9 +1,9 @@
 # Praktikum 3 - Perulangan
-RIDHO FHADLY HAMZAH
+NAMA    : RIDHO FHADLY HAMZAH
 
-312410486
+NIM     : 312410486
 
-TI 24 A5
+KELAS   : TI.24.A.5
 
 ## Latihan 1
 1. Tampilkan n bilangan acak yang lebih kecil dari 0.5.
@@ -34,33 +34,34 @@ Mengimpor Fungsi random dari Modul Python bernama Random.
 ```python
 n = int(input("Masukkan nilai N: "))
 ```
-Meminta Input N dari Pengguna
+Meminta Input `N` dari Pengguna
 ```python
 for i in range(n):
 ```
-Melakukan Loop sesuai dengan nilai N yg diinputkan pengguna sebelumnya
+Melakukan Loop sesuai dengan nilai `N` yg diinputkan pengguna sebelumnya
 ```python
  a = random()
 ```
-Variabel a diinisialisasi dengan nilai acak menggunakan random(), sehingga a memiliki nilai antara 0 dan 1.
+Variabel `a` diinisialisasi dengan nilai acak menggunakan `random()`, sehingga a memiliki nilai antara 0 dan 1.
 ```python
 while a >= 0.5:
 ```
-Jika nilai a yang dihasilkan lebih besar atau sama dengan 0.5, program akan mengulang proses pengacakan melalui while loop hingga menemukan nilai a yang kurang dari 0.5.
+Jika nilai `a` yang dihasilkan lebih besar atau sama dengan `0.5`, program akan mengulang proses pengacakan melalui `while loop` hingga menemukan nilai `a` yang kurang dari `0.5`.
 ```python
  a = random()
 ```
-Program mengacak kembali nilai a hingga menghasilkan nilai yang kurang dari 0.5. Setiap kali a >= 0.5, pernyataan a = random() dijalankan lagi, dan proses ini akan berulang hingga ditemukan nilai yang memenuhi syarat.
+Program mengacak kembali nilai `a` hingga menghasilkan nilai yang kurang dari `0.5`. Setiap kali `a` >= `0.5`, pernyataan `a` = `random()` dijalankan lagi, dan proses ini akan berulang hingga ditemukan nilai yang memenuhi syarat.
 ```python
 print(f"data ke: {i+1} => {a}")
 ```
-Bagian {i+1} digunakan untuk menampilkan nomor urutan data acak yang dihasilkan. Karena i dimulai dari 0, maka i+1 memberikan nomor urutan mulai dari 1 hingga N, sesuai input pengguna.
-Bagian {a} akan mencetak nilai variabel a, yaitu nilai acak yang telah dihasilkan oleh random() dan memenuhi syarat a < 0.5.
-Format String F-String
-Dengan menggunakan f-string (f""), ekspresi atau variabel dapat langsung dimasukkan ke dalam string dalam {}.
-Output akan menunjukkan nomor urut data serta nilai acak a yang dihasilkan.
+Bagian `{i+1}` digunakan untuk menampilkan nomor urutan data acak yang dihasilkan. Maka i+1 memberikan nomor urutan mulai dari 1 hingga N, sesuai input pengguna.
+
+Bagian `{a}` akan mencetak nilai variabel a, yaitu nilai acak yang telah dihasilkan oleh random() dan memenuhi syarat a < 0.5.
+
+Output akan menunjukkan nomor urut data serta nilai acak `a` yang dihasilkan.
 
 ## Hasil Eksekusi Latihan 1
+![foto](https://github.com/Nakii-ru/foto/blob/main/Screenshot%202024-11-01%20193310.png?raw=true)
 
 ## Latihan 2
 Seorang pengusaha menginvestasikan uangnya untuk memulai usahanya dengan modal
@@ -86,27 +87,39 @@ for i in range(8):
 
 print(f"\nTotal keuntungan selama 8 bulan = Rp {total_keuntungan:,.2f}")
 ```
+
 ## Penjelasan Program
 ```python
 modal_awal = 100_000_000
 ```
+Inisialisasi variabel modal_awal dengan nilai 100_000_000.
 ```python
 laba_per_bulan = [0, 0, 0.01, 0.01, 0.05, 0.05, 0.05, 0.03]
 ```
+`laba_per_bulan` berisi daftar persentase laba untuk setiap bulan selama 8 bulan.
 ```python
 total_keuntungan = 0
 ```
+Variabel `total_keuntungan` berfungsi untuk menyimpan total keuntungan yg akan terus diperbarui di setiap bulan selama iterasi.
 ```python
 for i in range(8):
     keuntungan_bulan_ini = modal_awal * laba_per_bulan[i]
     total_keuntungan += keuntungan_bulan_ini
     print(f"Bulan {i+1}: Keuntungan = Rp {keuntungan_bulan_ini:,.2f}")
 ```
+`for i in range(8)`: Loop ini akan berjalan sebanyak `8` kali, yaitu untuk 8 bulan.
+
+menginisialisasi variabel `keuntungan_bulan_ini` = `modal_awal` * `laba_per_bulan[i]` 
+
+`print(f"Bulan {i+1}: Keuntungan = Rp {keuntungan_bulan_ini:,.2f}")` untu menampilkan keuntungan yang didapatkan setiap bulan.
+
 ```python
 print(f"\nTotal keuntungan selama 8 bulan = Rp {total_keuntungan:,.2f}")
 ```
+Setelah loop selesai, total keuntungan yg sudah dihitung selama 8 bulan akan ditampilkan.
 
 ## Hasil Eksekusi Latihan 2
+![foto](https://github.com/Nakii-ru/foto/blob/main/Screenshot%202024-11-01%20193329.png?raw=true)
 
 ## Latihan 3
 Buat program yang mensimulasikan mesin ATM sederhana. Pengguna memiliki saldo awal
@@ -138,13 +151,12 @@ while True:
             break
 ```
 ## Penjelasan Program
-```python
-saldo = 1000000
-```
+
 ```python
 saldo = 1000000
 print("Selamat datang di mesin ATM sederhana!")
 ```
+Program dimulai dengan inisialisasi saldo menjadi 1000000
 ```python
 while True:
         print("1. Tarik Uang")
@@ -152,25 +164,36 @@ while True:
 
         pilihan = input("Pilih menu (1/2): ")
 ```
+Saat program masuk ke dalam loop, menu atm akan terus memberikan 2 opsi kepada pengguna.
 ```python
  if pilihan == '1':     
                 jumlah = int(input("Masukkan jumlah uang yang ingin ditarik: Rp "))
+```
+Jika pengguna memilih 1, program meminta jumlah uang yang ingin ditarik.
+```python
                 if jumlah > saldo:
                     print("Saldo tidak mencukupi.")
-```
-```python
 elif jumlah <= 0:
                     print("Jumlah penarikan harus lebih dari nol.")
-```
-```python
   else:
                     saldo -= jumlah
                     print(f"Anda berhasil menarik Rp {jumlah}. Saldo tersisa: Rp {saldo}")
 
 ```
+Program kemudian memeriksa beberapa kondisi:
+
+`Saldo Tidak Mencukupi`: Jika jumlah yang dimasukkan lebih besar dari saldo, program menampilkan pesan bahwa saldo tidak mencukupi.
+
+`Jumlah Penarikan Tidak Valid`: Jika jumlah yang dimasukkan kurang dari atau sama dengan nol
+
+`Penarikan Berhasil`: Jika jumlah penarikan valid dan cukup, program mengurangi saldo dengan jumlah tersebut dan menampilkan saldo yang tersisa.
+
 ```python
         elif pilihan == '2':
             print("Terima kasih telah menggunakan ATM. Sampai jumpa!")
             break
 ```
+Jika pengguna memilih `2`, program menampilkan pesan terima kasih dan keluar dari loop menggunakan `break`.
+
 ## Hasil Eksekusi Latihan 3
+![foto](https://github.com/Nakii-ru/foto/blob/main/Screenshot%202024-11-01%20193947.png?raw=true)
