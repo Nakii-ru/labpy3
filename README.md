@@ -54,11 +54,7 @@ Program mengacak kembali nilai `a` hingga menghasilkan nilai yang kurang dari `0
 ```python
 print(f"data ke: {i+1} => {a}")
 ```
-Bagian `{i+1}` digunakan untuk menampilkan nomor urutan data acak yang dihasilkan. Maka i+1 memberikan nomor urutan mulai dari 1 hingga N, sesuai input pengguna.
-
-Bagian `{a}` akan mencetak nilai variabel a, yaitu nilai acak yang telah dihasilkan oleh random() dan memenuhi syarat a < 0.5.
-
-Output akan menunjukkan nomor urut data serta nilai acak `a` yang dihasilkan.
+Output akan menunjukkan nomor urut data `i` serta nilai acak `a` yang dihasilkan.
 
 ## Hasil Eksekusi Latihan 1
 ![foto](https://github.com/Nakii-ru/foto/blob/main/Screenshot%202024-11-01%20193310.png?raw=true)
